@@ -1,0 +1,5 @@
+<h3> These are all the posts with  "<%= @tag.name %>" tag </h3> 
+<% allpost = @tag.posts %>
+<% allpost.each do |eachpost| %> 
+<%= eachpost.title %> <br>
+<% end %> 

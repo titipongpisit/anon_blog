@@ -1,0 +1,20 @@
+<h1> These are all the posts we have </h1> 
+<% @post.each do |eachpost| %> 
+  Post: <%= eachpost.id %> <br> 
+  Title:  <%= eachpost.title %> <br> 
+  Body: <%= eachpost.body %> <br>
+  Author: <%= eachpost.author %><br> 
+  Tags: <% eachpost.tags.each do |eachtag| %> 
+   <a href="/tag/<%= eachtag.id %>"> <%=  eachtag.name %> </a> 
+  <% end %> 
+  <form action="/delete_post/<%= eachpost.id %>" method="POST">
+  <a href= 'post/<%= eachpost.id%>/edit'> edit </a> 
+  <input type="submit" value="delete"> </a> 
+  </form> 
+  <br> 
+  <br> 
+<% end %>
+  <form action="/create_post" method="POST">
+  <input type="submit" value="create new post">
+  </form> 
+ 

@@ -1,0 +1,8 @@
+<h1> Edit Post </h1> 
+<% if @doagain %> 
+<%= @doagain %>
+<% end %> 
+
+<form action="/post/<%=@post.id%>/edit" method="POST">
+  <%= erb :_form_fields, layout: false %>
+</form>

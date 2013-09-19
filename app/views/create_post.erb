@@ -1,0 +1,9 @@
+<h1> Create New Post </h1> 
+<% if @doagain %>
+<%= @doagain %>
+<% end %> 
+
+<form action="/new_post" method="POST">
+  <%= erb :_form_fields, layout: false %>
+</form>
+
